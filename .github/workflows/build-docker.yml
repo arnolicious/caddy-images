@@ -17,6 +17,7 @@ jobs:
       matrix:
         subfolder:
           - l4-crowdsec
+          - docker-cloudflare
 
     steps:
       - name: Checkout code
