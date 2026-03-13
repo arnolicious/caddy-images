@@ -38,7 +38,7 @@ jobs:
         run: echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
       - name: Build Docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ./${{ matrix.subfolder }}
           load: true
@@ -53,7 +53,7 @@ jobs:
           echo "version=$CADDY_VERSION" >> $GITHUB_OUTPUT
 
       - name: Build and push with final tag
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ./${{ matrix.subfolder }}
           push: true
